@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { chatService } from '../services/ChatService';
 import './Root.css';
 
 interface IState {
@@ -25,20 +24,9 @@ class Root extends React.Component<{}, IState> {
 
   handleSubmit(event: any) {
     event.preventDefault();
-
-    chatService.sendMessage(this.state.value);
-    this.setState({ value: '' });
   }
 
   componentDidMount() {
-    chatService
-      .getMessages()
-      .distinctUntilChanged()
-      .filter((message: string) => message.trim().length > 0)
-      .throttleTime(1000)
-      .subscribe((message: string) => {
-        this.setState({ messages: [...this.state.messages, message] });
-      });
   }
 
   render() {
@@ -50,11 +38,9 @@ class Root extends React.Component<{}, IState> {
         <div className='chat-body'>
           <div className='chat-content'>
             <div className='chat-item'>
-              {this.state.messages.map((message: string, key) => (
-                <p key={key} className='chat-message'>
-                  {message}
+                <p className='chat-message'>
+                  Teste
                 </p>
-              ))}
             </div>
             <form className='chat-form' onSubmit={this.handleSubmit}>
               <input className='chat-form-input' type='text' placeholder='Digite sua mensagem'
