@@ -1,0 +1,1 @@
+export const SERVER_URL = 'https://rxjs-chat-server.herokuapp.com';

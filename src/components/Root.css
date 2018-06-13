@@ -106,7 +106,7 @@ body {
   width: 0;
   position: absolute;
   top: 0;
-  right: -5px;
+  left: -5px;
 }
 .chat-form {
   border-top: 1px solid #dddddd;
@@ -135,7 +135,9 @@ body {
   text-transform: uppercase;
   margin: 0;
   cursor: pointer;
+  outline: none;
 }
+
 .button:hover, .button:active {
   opacity: 0.8;
 }
