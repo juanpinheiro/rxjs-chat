@@ -13,10 +13,10 @@ class Root extends React.Component {
             <div className='chat-item is-me'>
               <p className='chat-message'>Teste</p>
             </div>
-          <form className='chat-form'>
-            <input className='chat-form-input' type='text' placeholder='Enter your message'/>
-            <a className='button'>Send</a>
-          </form>
+            <div className='chat-form'>
+              <input className='chat-form-input' type='text' placeholder='Enter your message'/>
+              <a className='button'>Send</a>
+            </div>
           </div>
         </div>
       </div>
