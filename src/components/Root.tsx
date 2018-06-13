@@ -50,8 +50,8 @@ class Root extends React.Component<{}, IState> {
         <div className='chat-body'>
           <div className='chat-content'>
             <div className='chat-item'>
-              {this.state.messages.map((message: string) => (
-                <p className='chat-message'>
+              {this.state.messages.map((message: string, key) => (
+                <p key={key} className='chat-message'>
                   {message}
                 </p>
               ))}
